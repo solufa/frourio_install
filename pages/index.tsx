@@ -51,7 +51,7 @@ const Home = () => {
         <UserBanner />
 
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.jjhgs!</a>
         </h1>
 
         <p className={styles.description}>frourio-todo-app</p>
