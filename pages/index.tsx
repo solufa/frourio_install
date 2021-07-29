@@ -39,7 +39,7 @@ const Home = () => {
 
   if (error) return <div>failed to load</div>
   if (!tasks) return <div>loading...</div>
-
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -48,40 +48,10 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <UserBanner />
-
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.jjhgs!</a>
-        </h1>
-
-        <p className={styles.description}>frourio-todo-app</p>
-
-        <div>
-          <form style={{ textAlign: 'center' }} onSubmit={createTask}>
-            <input value={label} type="text" onChange={inputLabel} />
-            <input type="submit" value="ADD" />
-          </form>
-          <ul className={styles.tasks}>
-            {tasks.map((task) => (
-              <li key={task.id}>
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={task.done}
-                    onChange={() => toggleDone(task)}
-                  />
-                  <span>{task.label}</span>
-                </label>
-                <input
-                  type="button"
-                  value="DELETE"
-                  style={{ float: 'right' }}
-                  onClick={() => deleteTask(task)}
-                />
-              </li>
-            ))}
-          </ul>
+        <div className={styles.square}>
+          <div className={styles.squareIn}></div>
         </div>
+        
       </main>
 
       <footer className={styles.footer}>
