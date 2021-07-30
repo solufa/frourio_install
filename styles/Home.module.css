@@ -83,6 +83,9 @@
   width: 640px;
   max-width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .square {
@@ -402,6 +405,9 @@
   border: 1px solid black;
   top: 180px;
   left: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -413,6 +419,9 @@
   border: 1px solid black;
   top: 180px;
   left: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -490,6 +499,9 @@
   border: 1px solid black;
   top: 240px;
   left: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -501,6 +513,9 @@
   border: 1px solid black;
   top: 240px;
   left: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -801,34 +816,39 @@
   z-index: 2;
 }
 
-.circle1 {
+.stone1 {
   width: 80%;
   height: 80%;
   background-color: black;
   border-radius: 50%;
+  margin: auto;
   z-index: 3;
 }
 
-.circle2 {
+.stone2 {
   width: 80%;
   height: 80%;
   background-color: white;
   border-radius: 50%;
+  margin: 0 auto;
+  
   z-index: 3;
 }
 
-.circle3 {
+.stone3 {
   width: 80%;
   height: 80%;
   background-color: black;
   border-radius: 50%;
+  margin: auto;
   z-index: 3;
 }
 
-.circle4 {
+.stone4 {
   width: 80%;
   height: 80%;
   background-color: white;
   border-radius: 50%;
+  margin: auto;
   z-index: 3;
 }
