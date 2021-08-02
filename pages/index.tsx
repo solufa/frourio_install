@@ -38,21 +38,21 @@ const Home = () => {
     revalidate()
   }, [])
 
-  const onClick = useCallback(() => {
+  const onClick = () => {
     alert("クリックされました")
-  }, [])
+  }
 
-  const clickWhiteStone = useCallback(() => {
-    alert("白い石がクリックされました")
-  }, [])
+  const clickWhiteStone = (x: number, y: number) => {
+    alert("上からx行目、左からy行目の白い石がクリックされました")
+  }
 
-  const clickBlackStone = useCallback(() => {
-    alert("黒い石がクリックされました")
-  }, [])
+  const clickBlackStone = (x: number, y: number) => {
+    alert("上からx行目、左からy行目の黒い石がクリックされました")
+  }
 
-  const noStone = useCallback(() => {
-    alert("ここに石はありません")
-  }, [])
+  const noStone = (x: number, y: number) => {
+    alert("上からx行目、左からy行目に石はありません")
+  }
 
   if (error) return <div>failed to load</div>
   if (!tasks) return <div>loading...</div>
@@ -68,78 +68,78 @@ const Home = () => {
         <div className="wrapper" onClick={onClick}>
           <div className={styles.square}>
             <div className={styles.squareIn}>
-                <div className={styles.box1} onClick={noStone}></div>
-                <div className={styles.box2} onClick={noStone}></div>
-                <div className={styles.box3} onClick={noStone}></div>
-                <div className={styles.box4} onClick={noStone}></div>
-                <div className={styles.box5} onClick={noStone}></div>
-                <div className={styles.box6} onClick={noStone}></div>
-                <div className={styles.box7} onClick={noStone}></div>
-                <div className={styles.box8} onClick={noStone}></div>
-                <div className={styles.box9} onClick={noStone}></div>
-                <div className={styles.box10} onClick={noStone}></div>
-                <div className={styles.box11} onClick={noStone}></div>
-                <div className={styles.box12} onClick={noStone}></div>
-                <div className={styles.box13} onClick={noStone}></div>
-                <div className={styles.box14} onClick={noStone}></div>
-                <div className={styles.box15} onClick={noStone}></div>
-                <div className={styles.box16} onClick={noStone}></div>
-                <div className={styles.box17} onClick={noStone}></div>
-                <div className={styles.box18} onClick={noStone}></div>
-                <div className={styles.box19} onClick={noStone}></div>
-                <div className={styles.box20} onClick={noStone}></div>
-                <div className={styles.box21} onClick={noStone}></div>
-                <div className={styles.box22} onClick={noStone}></div>
-                <div className={styles.box23} onClick={noStone}></div>
-                <div className={styles.box24} onClick={noStone}></div>
-                <div className={styles.box25} onClick={noStone}></div>
-                <div className={styles.box26} onClick={noStone}></div>
-                <div className={styles.box27} onClick={noStone}></div>
+                <div className={styles.box1} onClick={onClick => {noStone(1, 1)}}></div>
+                <div className={styles.box2} onClick={onClick => {noStone(1, 2)}}></div>
+                <div className={styles.box3} onClick={onClick => {noStone(1, 3)}}></div>
+                <div className={styles.box4} onClick={onClick => {noStone(1, 4)}}></div>
+                <div className={styles.box5} onClick={onClick => {noStone(1, 5)}}></div>
+                <div className={styles.box6} onClick={onClick => {noStone(1, 6)}}></div>
+                <div className={styles.box7} onClick={onClick => {noStone(1, 7)}}></div>
+                <div className={styles.box8} onClick={onClick => {noStone(1, 8)}}></div>
+                <div className={styles.box9} onClick={onClick => {noStone(2, 1)}}></div>
+                <div className={styles.box10} onClick={onClick => {noStone(2, 2)}}></div>
+                <div className={styles.box11} onClick={onClick => {noStone(2, 3)}}></div>
+                <div className={styles.box12} onClick={onClick => {noStone(2, 4)}}></div>
+                <div className={styles.box13} onClick={onClick => {noStone(2, 5)}}></div>
+                <div className={styles.box14} onClick={onClick => {noStone(2, 6)}}></div>
+                <div className={styles.box15} onClick={onClick => {noStone(2, 7)}}></div>
+                <div className={styles.box16} onClick={onClick => {noStone(2, 8)}}></div>
+                <div className={styles.box17} onClick={onClick => {noStone(3, 1)}}></div>
+                <div className={styles.box18} onClick={onClick => {noStone(3, 2)}}></div>
+                <div className={styles.box19} onClick={onClick => {noStone(3, 3)}}></div>
+                <div className={styles.box20} onClick={onClick => {noStone(3, 4)}}></div>
+                <div className={styles.box21} onClick={onClick => {noStone(3, 5)}}></div>
+                <div className={styles.box22} onClick={onClick => {noStone(3, 6)}}></div>
+                <div className={styles.box23} onClick={onClick => {noStone(3, 7)}}></div>
+                <div className={styles.box24} onClick={onClick => {noStone(3, 8)}}></div>
+                <div className={styles.box25} onClick={onClick => {noStone(4, 1)}}></div>
+                <div className={styles.box26} onClick={onClick => {noStone(4, 2)}}></div>
+                <div className={styles.box27} onClick={onClick => {noStone(4, 3)}}></div>
                 <div className={styles.box28}>
-                  <div className={styles.stone1} onClick={clickBlackStone}></div>
+                  <div className={styles.stone1} onClick={onClick => {clickBlackStone(4, 4)}}></div>
                 </div>
                 <div className={styles.box29}>
-                  <div className={styles.stone2} onClick={clickWhiteStone}></div>
+                  <div className={styles.stone2} onClick={onClick => {clickWhiteStone(4, 5)}}></div>
                 </div>
-                <div className={styles.box30} onClick={noStone}></div>
-                <div className={styles.box31} onClick={noStone}></div>
-                <div className={styles.box32} onClick={noStone}></div>
-                <div className={styles.box33} onClick={noStone}></div>
-                <div className={styles.box34} onClick={noStone}></div>
-                <div className={styles.box35} onClick={noStone}></div>
+                <div className={styles.box30} onClick={onClick => {noStone(4, 6)}}></div>
+                <div className={styles.box31} onClick={onClick => {noStone(4, 7)}}></div>
+                <div className={styles.box32} onClick={onClick => {noStone(4, 8)}}></div>
+                <div className={styles.box33} onClick={onClick => {noStone(5, 1)}}></div>
+                <div className={styles.box34} onClick={onClick => {noStone(5, 2)}}></div>
+                <div className={styles.box35} onClick={onClick => {noStone(5, 3)}}></div>
                 <div className={styles.box36}>
-                  <div className={styles.stone4} onClick={clickWhiteStone}></div>
+                  <div className={styles.stone4} onClick={onClick => {clickWhiteStone(5, 4)}}></div>
                 </div>
                 <div className={styles.box37}>
-                  <div className={styles.stone3} onClick={clickBlackStone}></div>
+                  <div className={styles.stone3} onClick={onClick => {clickBlackStone(5, 5)}}></div>
                 </div>
-                <div className={styles.box38} onClick={noStone}></div>
-                <div className={styles.box39} onClick={noStone}></div>
-                <div className={styles.box40} onClick={noStone}></div>
-                <div className={styles.box41} onClick={noStone}></div>
-                <div className={styles.box42} onClick={noStone}></div>
-                <div className={styles.box43} onClick={noStone}></div>
-                <div className={styles.box44} onClick={noStone}></div>
-                <div className={styles.box45} onClick={noStone}></div>
-                <div className={styles.box46} onClick={noStone}></div>
-                <div className={styles.box47} onClick={noStone}></div>
-                <div className={styles.box48} onClick={noStone}></div>
-                <div className={styles.box49} onClick={noStone}></div>
-                <div className={styles.box50} onClick={noStone}></div>
-                <div className={styles.box51} onClick={noStone}></div>
-                <div className={styles.box52} onClick={noStone}></div>
-                <div className={styles.box53} onClick={noStone}></div>
-                <div className={styles.box54} onClick={noStone}></div>
-                <div className={styles.box55} onClick={noStone}></div>
-                <div className={styles.box56} onClick={noStone}></div>
-                <div className={styles.box57} onClick={noStone}></div>
-                <div className={styles.box58} onClick={noStone}></div>
-                <div className={styles.box59} onClick={noStone}></div>
-                <div className={styles.box60} onClick={noStone}></div>
-                <div className={styles.box61} onClick={noStone}></div>
-                <div className={styles.box62} onClick={noStone}></div>
-                <div className={styles.box63} onClick={noStone}></div>
-                <div className={styles.box64} onClick={noStone}></div>
+                <div className={styles.box38} onClick={onClick => {noStone(5, 6)}}></div>
+                <div className={styles.box39} onClick={onClick => {noStone(5, 7)}}></div>
+                <div className={styles.box40} onClick={onClick => {noStone(5, 8)}}></div>
+                <div className={styles.box41} onClick={onClick => {noStone(6, 1)}}></div>
+                <div className={styles.box42} onClick={onClick => {noStone(6, 2)}}></div>
+                <div className={styles.box43} onClick={onClick => {noStone(6, 3)}}></div>
+                <div className={styles.box44} onClick={onClick => {noStone(6, 4)}}></div>
+                <div className={styles.box45} onClick={onClick => {noStone(6, 5)}}></div>
+                <div className={styles.box46} onClick={onClick => {noStone(6, 6)}}></div>
+                <div className={styles.box47} onClick={onClick => {noStone(6, 7)}}></div>
+                <div className={styles.box48} onClick={onClick => {noStone(6, 8)}}></div>
+                <div className={styles.box49} onClick={onClick => {noStone(7, 1)}}></div>
+                <div className={styles.box50} onClick={onClick => {noStone(7, 2)}}></div>
+                <div className={styles.box51} onClick={onClick => {noStone(7, 3)}}></div>
+                <div className={styles.box52} onClick={onClick => {noStone(7, 4)}}></div>
+                <div className={styles.box53} onClick={onClick => {noStone(7, 5)}}></div>
+                <div className={styles.box54} onClick={onClick => {noStone(7, 6)}}></div>
+                <div className={styles.box55} onClick={onClick => {noStone(7, 7)}}></div>
+                <div className={styles.box56} onClick={onClick => {noStone(7, 8)}}></div>
+                <div className={styles.box57} onClick={onClick => {noStone(8, 1)}}></div>
+                <div className={styles.box58} onClick={onClick => {noStone(8, 2)}}></div>
+                <div className={styles.box59} onClick={onClick => {noStone(8, 3)}}></div>
+                <div className={styles.box60} onClick={onClick => {noStone(8, 4)}}></div>
+                <div className={styles.box61} onClick={onClick => {noStone(8, 5)}}></div>
+                <div className={styles.box62} onClick={onClick => {noStone(8, 6)}}></div>
+                <div className={styles.box63} onClick={onClick => {noStone(8, 7)}}></div>
+                <div className={styles.box64} onClick={onClick => {noStone(8, 8)}}></div>
             </div>
           </div>
         </div>
