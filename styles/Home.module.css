@@ -109,39 +109,17 @@
   height: 100%;
   background-color: green;
 }
-.stone1 {
+
+.blackStone {
   width: 80%;
   height: 80%;
   background-color: black;
   border-radius: 50%;
-  margin: auto;
-  z-index: 3;
 }
 
-.stone2 {
+.whiteStone {
   width: 80%;
   height: 80%;
   background-color: white;
   border-radius: 50%;
-  margin: 0 auto;
-  
-  z-index: 3;
-}
-
-.stone3 {
-  width: 80%;
-  height: 80%;
-  background-color: black;
-  border-radius: 50%;
-  margin: auto;
-  z-index: 3;
-}
-
-.stone4 {
-  width: 80%;
-  height: 80%;
-  background-color: white;
-  border-radius: 50%;
-  margin: auto;
-  z-index: 3;
 }
