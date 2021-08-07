@@ -58,7 +58,67 @@ const Home = () => {
     {x:0, y:0},
     {x:1, y:0},
     {x:2, y:0},
-    {x:3, y:0}
+    {x:3, y:0},
+    {x:4, y:0},
+    {x:5, y:0},
+    {x:6, y:0},
+    {x:7, y:0},
+    {x:0, y:1},
+    {x:1, y:1},
+    {x:2, y:1},
+    {x:3, y:1},
+    {x:4, y:1},
+    {x:5, y:1},
+    {x:6, y:1},
+    {x:7, y:1},
+    {x:0, y:2},
+    {x:1, y:2},
+    {x:2, y:2},
+    {x:3, y:2},
+    {x:4, y:2},
+    {x:5, y:2},
+    {x:6, y:2},
+    {x:7, y:2},
+    {x:0, y:3},
+    {x:1, y:3},
+    {x:2, y:3},
+    {x:3, y:3},
+    {x:4, y:3},
+    {x:5, y:3},
+    {x:6, y:3},
+    {x:7, y:3},
+    {x:0, y:4},
+    {x:1, y:4},
+    {x:2, y:4},
+    {x:3, y:4},
+    {x:4, y:4},
+    {x:5, y:4},
+    {x:6, y:4},
+    {x:7, y:4},
+    {x:0, y:5},
+    {x:1, y:5},
+    {x:2, y:5},
+    {x:3, y:5},
+    {x:4, y:5},
+    {x:5, y:5},
+    {x:6, y:5},
+    {x:7, y:5},
+    {x:0, y:6},
+    {x:1, y:6},
+    {x:2, y:6},
+    {x:3, y:6},
+    {x:4, y:6},
+    {x:5, y:6},
+    {x:6, y:6},
+    {x:7, y:6},
+    {x:0, y:7},
+    {x:1, y:7},
+    {x:2, y:7},
+    {x:3, y:7},
+    {x:4, y:7},
+    {x:5, y:7},
+    {x:6, y:7},
+    {x:7, y:7},
   ])
 
   if (error) return <div>failed to load</div>
@@ -75,78 +135,6 @@ const Home = () => {
         <div className="wrapper" onClick={onClick}>
           <div className={styles.square}>
             <div className={styles.squareIn}>
-                <div className={styles.cell} onClick={() => {noStone(0, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(0, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(1, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(2, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(3, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(3, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(3, 2)}}></div>
-                <div className={styles.cell}>
-                  <div className={styles.stone1} onClick={() => {clickBlackStone(3, 3)}}></div>
-                </div>
-                <div className={styles.cell}>
-                  <div className={styles.stone2} onClick={() => {clickWhiteStone(3, 4)}}></div>
-                </div>
-                <div className={styles.cell} onClick={() => {noStone(3, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(3, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(3, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(4, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(4, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(4, 2)}}></div>
-                <div className={styles.cell}>
-                  <div className={styles.stone4} onClick={() => {clickWhiteStone(4, 3)}}></div>
-                </div>
-                <div className={styles.cell}>
-                  <div className={styles.stone3} onClick={() => {clickBlackStone(4, 4)}}></div>
-                </div>
-                <div className={styles.cell} onClick={() => {noStone(4, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(4, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(4, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(5, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(6, 7)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 0)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 1)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 2)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 3)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 4)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 5)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 6)}}></div>
-                <div className={styles.cell} onClick={() => {noStone(7, 7)}}></div>
                 {board.map((cell, i) => (
                   <div key={i} className={styles.cell} onClick={() => {useState}}></div>))}
             </div>
