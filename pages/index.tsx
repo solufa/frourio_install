@@ -52,7 +52,7 @@ const Home = () => {
 
   const noStone = (x: number, y: number) => {
     alert(`上から${x}行目、左から${y}行目に石はありません`)
-  }
+  }
 
   if (error) return <div>failed to load</div>
   if (!tasks) return <div>loading...</div>
