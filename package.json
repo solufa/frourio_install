@@ -7,15 +7,17 @@
     "dev:client": "next dev -p 8000",
     "dev:server": "npm run dev --prefix server",
     "dev:aspida": "aspida --watch",
+    "dev:css": "tcm styles --watch",
     "build": "run-p build:client build:server",
     "prebuild:client": "npm run generate",
     "build:client": "next build && next export",
     "build:server": "npm run build --prefix server",
     "generate": "run-p generate:*",
     "generate:aspida": "aspida",
+    "generate:css": "tcm styles",
     "generate:server": "npm run generate --prefix server",
-    "lint": "eslint --ext .ts,.js,.tsx . && prettier --check \"./**/*.ts\"",
-    "lint:fix": "eslint --ext .ts,.js,.tsx . --fix && prettier --write \"./**/*.ts\"",
+    "lint": "eslint --ext .ts,.js,.tsx . && prettier --check \"./**/*.ts(|x)\"",
+    "lint:fix": "eslint --ext .ts,.js,.tsx . --fix && prettier --write \"./**/*.ts(|x)\"",
     "migrate:dev": "npm run migrate:dev --prefix server",
     "migrate:reset": "npm run migrate:reset --prefix server",
     "start": "run-p start:*",
@@ -61,6 +63,7 @@
     "ts-jest": "^26.5.5",
     "ts-loader": "^8.1.0",
     "ts-node": "^9.1.1",
+    "typed-css-modules": "^0.7.0",
     "typescript": "~4.2"
   }
 }
